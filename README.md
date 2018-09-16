@@ -1,6 +1,6 @@
 # Genetics DIY Project
 
-A Project for creating genetic visualizations. See full blogpost here:
+A Project for creating genetic visualizations. See full blogpost here: https://medium.com/@thousandroses420/tutorial-launch-your-personal-genomics-cloud-app-in-15-min-aws-genetics-python-ml-b0d1540e6e70
 
 ## Deployment of pre-built code
 
