@@ -84,7 +84,7 @@ def create_wordcloud_image(same1):
 ''' Function for creating a cluster image of your traits '''
 def create_cluster_image(trait_dict,snp_traits):
 	top = [tup[0] for tup in Counter('#'.join(['#'.join(t) for t in snp_traits.values]).split('#')).most_common(20)]
-	ohe_traits = np.asarray([[1 if t in ts else 0 for ts in trait_dict.keys()] for ts in snp_traits])
+	ohe_traits = np.asarray([[1 if t in ts else 0 for t in trait_dict.keys()] for ts in snp_traits])
 	occurrences = [np.nonzero(ohe_traits[:,list(trait_dict.keys()).index(trait)]) for trait in top]
 	tsne_values = TSNE(n_components=2).fit_transform(ohe_traits)*5
 	plt.figure()
