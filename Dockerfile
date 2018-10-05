@@ -23,7 +23,7 @@ RUN cd /home && wget http://downloads.sourceforge.net/project/boost/boost/1.60.0
   && rm -rf boost_1_60_0
 # Clone git repo for the ancestry program we need
 RUN cd /home \
-  && git clone https://bitbucket.org/joepickrell/ancestry
+  && git clone https://github.com/pickleriiick/ancestry_mirror
 RUN apt-get update && \
     apt-get install -y \
         zlib1g-dev
