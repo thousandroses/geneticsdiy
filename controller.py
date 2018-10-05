@@ -23,7 +23,7 @@ def prepare_data():
 	[copyfile(sys.argv[index+1], files[index]) for index in range(len(sys.argv)-1)]
 	with open(files[0], 'rb') as f_in, gzip.GzipFile(files[3], 'wb') as gzip_file:
 		gzip_file.write(f_in.read())
-	call(["/home/ancestry/src/ancestry", "-i", files[1], "-b", "2", "-ranN", "100000", "-g23", files[3], "-o", "/home/ancestry/test"])
+	call(["/home/ancestry_mirror/src/ancestry", "-i", files[1], "-b", "2", "-ranN", "100000", "-g23", files[3], "-o", "/home/ancestry/test"])
 	ref = pd.read_csv(files[2], sep='\t', index_col = [0]).rename(index=str, columns={'MAPPED_TRAIT':'trait'})
 	ref = ref[pd.to_numeric(ref['P-VALUE'], errors='coerce').notnull()]
 	ref = ref[pd.to_numeric(ref['RISK ALLELE FREQUENCY'], errors='coerce').notnull()]
