@@ -44,10 +44,10 @@ RUN cd /usr/bin/htslib-1.9/ && make
 RUN cd /usr/bin/htslib-1.9/ && make install
 ENV LD_LIBRARY_PATH /usr/bin/htslib-1.9/
 # Configure and make the ancestry program
-RUN cd /home/ancestry/ && ./configure && make clean && make
+RUN cd /home/ancestry_mirror/ && ./configure && make clean && make
 # Add the folder files to the container's root directory
 ADD . .
-RUN chmod +x /home/ancestry/src/ancestry.cpp
+RUN chmod +x /home/ancestry/src/ancestry_mirror.cpp
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
