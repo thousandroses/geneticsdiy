@@ -2,6 +2,8 @@
 
 A Project for creating genetic visualizations. See full blogpost here: https://medium.com/@thousandroses420/tutorial-launch-your-personal-genomics-cloud-app-in-15-min-aws-genetics-python-ml-b0d1540e6e70
 
+Edit: for some reason the ancestry repo is offline, so I'm using a mirror. I'm working on fixing the references. Sorry for the inconvenience.
+
 ## Deployment of pre-built code
 
 You're probably here from the Medium blog post. To deploy the pre-built code, follow the instructions from the blog-post from Section 4 of the blog-post onward, but instead
