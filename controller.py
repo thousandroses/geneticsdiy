@@ -51,7 +51,7 @@ def prepare_data():
 def create_ancestry_image(): 
 	anc_loc = {'ASHKENAZI': 'Poland', 'WEURASIA': 'Europe', 'BALOCHI-MAKRANI-BRAHUI': 'Pakistan', 'INDPAK': 'India', 'BANTUKENYA': 'Kenya', 'EAFRICA': 'Somalia', 'AFRICA': 'Africa', 'BANTUNIGERIA': 'Nigeria', 'WAFRICA': 'Ghana', 'BIAKA': 'Congo', 'CAFRICA': 'Chad', 'CAMBODIA-THAI': 'Cambodia', 'SEASIA': 'Phillipines', 'EASIA': 'Indonesia', 'CSAMERICA': 'Panama', 'AMERICAS': 'Nicaragua', 'CYPRUS-MALTA-SICILY': 'Sicily', 'EMED': 'Lebanon', 'SBALKANS': 'Serbia', 'ITALY': 'Itay', 'SWEUROPE': 'Sweden', 'EASTSIBERIA': 'Siberia', 'NEASIA': 'South Korea', 'FINNISH': 'Finland', 'NEEUROPE': 'England', 'GAMBIA': 'Gambia', 'GUJARAT': 'Gujarat', 'GUJARAT_PATEL': 'Gujarat', 'HADZA': 'Tanzania', 'HAZARA-UYGUR-UZBEK': 'Mongolia', 'CASIA': 'Kazakhstan', 'JAPAN-KOREA': 'Japan', 'KALASH': 'Pakistan', 'MENDE': 'Sierra Leone', 'NAFRICA': 'Tunisia', 'NCASIA': 'Kazakhstan', 'NEAREAST': 'Turkey', 'NEUROPE': 'Denmark', 'NGANASAN': 'Siberia', 'OCEANIA': 'Australia', 'PATHAN-SINDHI-BURUSHO': 'Pakistan', 'SAFRICA': 'South Africa', 'SAMERICA': 'Brazil', 'SARDINIA': 'Sardinia', 'SSASIA': 'Phillipines', 'BENGALI': 'India', 'TAIWAN': 'Taiwan', 'TUBALAR': 'Russia', 'TURK-IRAN-CAUCASUS': 'Iran'}
 	anc_prop,anc_coord,anc_count = {}, {}, {}
-	for anc_prop_fn in glob.glob('/home/ancestry/test*.Q'):
+	for anc_prop_fn in glob.glob('/home/ancestry_mirror/test*.Q'):
 		with open(anc_prop_fn,'r') as f_in:
 			for entry in f_in.readlines():
 				anc_prop[entry.split(' ')[0]]  = anc_prop[entry.split(' ')[0]] + float(entry.split(' ')[1]) if entry.split(' ')[0] in anc_prop else float(entry.split(' ')[1])
